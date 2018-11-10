@@ -18,6 +18,7 @@ func main() {
 			f, err := os.Open(arg)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "dp2: %v\n", err)
+				continue
 			}
 			countLines(f, counts)
 			f.Close()
